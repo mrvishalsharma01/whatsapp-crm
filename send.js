@@ -1,5 +1,5 @@
 const twilio = require('twilio');
-require('dotenv').config(); // Load .env variables
+require('dotenv').config(); // 
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
@@ -7,7 +7,7 @@ const fromWhatsAppNumber = process.env.TWILIO_WHATSAPP_NUMBER;
 
 const client = twilio(accountSid, authToken);
 
-// 👇 Yaha message bhejne ka function call karo
+// 
 async function sendWhatsApp(to, message) {
   try {
     const msg = await client.messages.create({
@@ -21,8 +21,8 @@ async function sendWhatsApp(to, message) {
   }
 }
 
-// 👇 Yaha apna WhatsApp number daalo (jo sandbox me linked hai)
+// 👇 
 sendWhatsApp(
-  '+918910733983', // <-- apna number yaha daalna, sandbox linked wala
+  '+918910733983', 
   'Hi! 👋 This is a test message from your WhatsApp CRM bot.'
 );

@@ -11,7 +11,7 @@ async function getSheetData() {
   const sheets = google.sheets({ version: "v4", auth: client });
 
   const spreadsheetId = "1T6EPGOj9M0hhPgqu3mgflXPVgw4xjbT3W5Tq13E6E5o";
-  const range = "Sheet1!A2:G"; // ✅ assuming 7 columns
+  const range = "Sheet1!A2:G"; // assuming 7 columns
 
   const res = await sheets.spreadsheets.values.get({
     spreadsheetId,
